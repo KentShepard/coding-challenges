@@ -1,5 +1,5 @@
 // Find a pair of integers in a given array that equal a given sum
-// Additional details can be found here: https://www.codewars.com/kata/sum-of-pairs/train/javascript
+// Link: https://www.codewars.com/kata/sum-of-pairs/train/javascript
 
 var findPair = function (array, sum) {
   var storage = new Set();
