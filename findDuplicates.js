@@ -1,4 +1,4 @@
-// Given two arrays of integers, find the duplicate elements between the two
+// Given two arrays of sorted integers, find all the pairs/common elements of integers between the two arrays
 
 var findDuplicates = function (array1, array2) {
   let results = [];
@@ -35,4 +35,4 @@ var findDuplicates = function (array1, array2) {
     }
   }
   return results;
-}
+} 
