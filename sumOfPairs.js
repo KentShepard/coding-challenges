@@ -1,20 +1,20 @@
 // Find a pair of integers in a given array that equal a given sum
 // Link: https://www.codewars.com/kata/sum-of-pairs/train/javascript
 
-var findPair = function (array, sum) {
+var findPair = function (nums, target) {
   var storage = new Set();
   var numberNeeded;
 
-  for (var i = 0; i < array.length; i++) {
-    numberNeeded = sum - array[i];
+  for (var i = 0; i < nums.length; i++) {
+    numberNeeded = target - nums[i];
     if (storage.has(numberNeeded)) {
-      return [numberNeeded, array[i]]
+      return [numberNeeded, nums[i]]
     }
-    storage.add(array[i]);
+    storage.add(nums[i]);
   }
 
   return undefined;
-}
+};
 
 // If array is sorted
 var findPair = function (array, sum) {
@@ -34,3 +34,19 @@ var findPair = function (array, sum) {
   }
   return null;
 }
+
+// https://leetcode.com/problems/two-sum/description/
+var twoSum = function (nums, target) {
+  var storage = {};
+  var numberNeeded;
+
+  for (var i = 0; i < nums.length; i++) {
+    numberNeeded = target - nums[i];
+    if (storage[numberNeeded] !== undefined) {
+      return [storage[numberNeeded], i]
+    }
+    storage[nums[i]] = i;
+  }
+
+  return undefined;
+};
